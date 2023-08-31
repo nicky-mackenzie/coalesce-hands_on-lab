@@ -1,0 +1,64 @@
+steps:
+  REGION-2ce5ceaa-79df-4e09-ad07-ef7514afbdf8:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Region data as defined by TPC-H
+      locationID: ""
+      locationName: TERENCELOCATION
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a4c3d64c-f323-44c8-912d-5b8bb5c0d500
+              stepCounter: 2ce5ceaa-79df-4e09-ad07-ef7514afbdf8
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: R_REGIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3342502b-9597-4ea5-a063-5f25c227d3bb
+              stepCounter: 2ce5ceaa-79df-4e09-ad07-ef7514afbdf8
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: ""
+            name: R_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 949fa21a-cbac-4f0c-ac12-dc75dd23a981
+              stepCounter: 2ce5ceaa-79df-4e09-ad07-ef7514afbdf8
+            config: {}
+            dataType: VARCHAR(152)
+            defaultValue: ""
+            description: ""
+            name: R_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TERENCELOCATION', 'REGION') }}
+      name: REGION
+      schema: ""
+      sqlType: Source
+      table: REGION
+      type: sourceInput
+    stepCounter: 2ce5ceaa-79df-4e09-ad07-ef7514afbdf8

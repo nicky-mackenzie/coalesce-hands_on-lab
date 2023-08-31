@@ -1,0 +1,79 @@
+steps:
+  NATION-fb772d66-ed17-4754-b463-9b796864d8b9:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Nation data as defined by TPC-H
+      locationID: ""
+      locationName: TERENCELOCATION
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ce6696d4-f382-4cdf-8ea1-f1268a8a78f1
+              stepCounter: fb772d66-ed17-4754-b463-9b796864d8b9
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: N_NATIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 22be2163-9c5f-4b17-bf7c-c5fd1588c594
+              stepCounter: fb772d66-ed17-4754-b463-9b796864d8b9
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: ""
+            name: N_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a22f434b-d689-406c-a584-a9ccd8de93c1
+              stepCounter: fb772d66-ed17-4754-b463-9b796864d8b9
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: N_REGIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: baaccac5-5e68-4089-b231-840c96868243
+              stepCounter: fb772d66-ed17-4754-b463-9b796864d8b9
+            config: {}
+            dataType: VARCHAR(152)
+            defaultValue: ""
+            description: ""
+            name: N_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TERENCELOCATION', 'NATION') }}
+      name: NATION
+      schema: ""
+      sqlType: Source
+      table: NATION
+      type: sourceInput
+    stepCounter: fb772d66-ed17-4754-b463-9b796864d8b9

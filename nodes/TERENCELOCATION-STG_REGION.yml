@@ -1,0 +1,78 @@
+steps:
+  STG_REGION-8718eb5f-f5bd-4e0e-bdca-f1b4783d8d85:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: Region data as defined by TPC-H
+      isMultisource: false
+      locationName: TERENCELOCATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 420ee38b-de18-4fd8-8c82-7acca9e7b9fb
+              stepCounter: 8718eb5f-f5bd-4e0e-bdca-f1b4783d8d85
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: R_REGIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a4c3d64c-f323-44c8-912d-5b8bb5c0d500
+                    stepCounter: 2ce5ceaa-79df-4e09-ad07-ef7514afbdf8
+                transform: ""
+          - columnReference:
+              columnCounter: f269478c-7fb9-4f6e-a9ac-491016cc4889
+              stepCounter: 8718eb5f-f5bd-4e0e-bdca-f1b4783d8d85
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: R_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3342502b-9597-4ea5-a063-5f25c227d3bb
+                    stepCounter: 2ce5ceaa-79df-4e09-ad07-ef7514afbdf8
+                transform: ""
+          - columnReference:
+              columnCounter: 685c6f02-6a57-4712-b1d6-b6c99993b63d
+              stepCounter: 8718eb5f-f5bd-4e0e-bdca-f1b4783d8d85
+            dataType: VARCHAR(152)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: R_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 949fa21a-cbac-4f0c-ac12-dc75dd23a981
+                    stepCounter: 2ce5ceaa-79df-4e09-ad07-ef7514afbdf8
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TERENCELOCATION
+                nodeName: REGION
+            join:
+              joinCondition: FROM {{ ref('TERENCELOCATION', 'REGION') }} "REGION"
+            name: STG_REGION
+            noLinkRefs: []
+      name: STG_REGION
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 8718eb5f-f5bd-4e0e-bdca-f1b4783d8d85

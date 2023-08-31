@@ -1,0 +1,106 @@
+steps:
+  STG_PARTSUPP-9d86d0aa-98b0-499e-86bb-52712ef6bc19:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: Partsupp data as defined by TPC-H
+      isMultisource: false
+      locationName: TERENCELOCATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 6c6c26b5-b00f-4ac9-bde7-fee60a512538
+              stepCounter: 9d86d0aa-98b0-499e-86bb-52712ef6bc19
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 58f9b11c-c965-4f55-8d37-9ef4b1d11ab0
+                    stepCounter: 098043ae-e938-4150-b5f5-338d0802cf6d
+                transform: ""
+          - columnReference:
+              columnCounter: 9a6b93a1-9bd7-410d-92e4-7a7aeaabfd87
+              stepCounter: 9d86d0aa-98b0-499e-86bb-52712ef6bc19
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1eb3e061-d807-4957-bf33-fc9db5774c23
+                    stepCounter: 098043ae-e938-4150-b5f5-338d0802cf6d
+                transform: ""
+          - columnReference:
+              columnCounter: b034a436-7c9f-435f-8d3a-157e2083cbdf
+              stepCounter: 9d86d0aa-98b0-499e-86bb-52712ef6bc19
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9a64fa36-8749-428a-ba48-35505b9bc852
+                    stepCounter: 098043ae-e938-4150-b5f5-338d0802cf6d
+                transform: ""
+          - columnReference:
+              columnCounter: b3b2dcd1-7df7-4690-9436-e38da6d6704a
+              stepCounter: 9d86d0aa-98b0-499e-86bb-52712ef6bc19
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 16aa2a03-c989-4634-bd81-3c9cd382f184
+                    stepCounter: 098043ae-e938-4150-b5f5-338d0802cf6d
+                transform: ""
+          - columnReference:
+              columnCounter: 1258142a-d879-4d5b-92de-de243bd4fceb
+              stepCounter: 9d86d0aa-98b0-499e-86bb-52712ef6bc19
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 91a4aadf-d88f-4e24-8fda-9da7921ddcf1
+                    stepCounter: 098043ae-e938-4150-b5f5-338d0802cf6d
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TERENCELOCATION
+                nodeName: PARTSUPP
+            join:
+              joinCondition: FROM {{ ref('TERENCELOCATION', 'PARTSUPP') }} "PARTSUPP"
+            name: STG_PARTSUPP
+            noLinkRefs: []
+      name: STG_PARTSUPP
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 9d86d0aa-98b0-499e-86bb-52712ef6bc19

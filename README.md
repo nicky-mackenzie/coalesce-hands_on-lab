@@ -1,1 +1,1 @@
-# coalesce-hands_on-lab
+# coalesce-hands-on-lab

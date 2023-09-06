@@ -1,0 +1,94 @@
+steps:
+  PARTSUPP-44539f8f-be79-417e-8e2c-1419b8224045:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Partsupp data as defined by TPC-H
+      locationID: ""
+      locationName: SAMPLE_SNOWFLAKE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c22c2e13-bb92-4515-b6b0-3d713aecbe1c
+              stepCounter: 44539f8f-be79-417e-8e2c-1419b8224045
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PS_PARTKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 04a330d6-0321-4a0d-9c7c-e61d585c3aec
+              stepCounter: 44539f8f-be79-417e-8e2c-1419b8224045
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PS_SUPPKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ec370ea0-5c25-45c5-8a5d-32460080aaa5
+              stepCounter: 44539f8f-be79-417e-8e2c-1419b8224045
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PS_AVAILQTY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 09eb55ad-75a3-4d95-ad56-3f01182caf92
+              stepCounter: 44539f8f-be79-417e-8e2c-1419b8224045
+            config: {}
+            dataType: NUMBER(12,2)
+            defaultValue: ""
+            description: ""
+            name: PS_SUPPLYCOST
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2ff30c69-288e-4a1a-9c9b-9e049b83807e
+              stepCounter: 44539f8f-be79-417e-8e2c-1419b8224045
+            config: {}
+            dataType: VARCHAR(199)
+            defaultValue: ""
+            description: ""
+            name: PS_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SAMPLE_SNOWFLAKE', 'PARTSUPP') }}
+      name: PARTSUPP
+      schema: ""
+      sqlType: Source
+      table: PARTSUPP
+      type: sourceInput
+    stepCounter: 44539f8f-be79-417e-8e2c-1419b8224045

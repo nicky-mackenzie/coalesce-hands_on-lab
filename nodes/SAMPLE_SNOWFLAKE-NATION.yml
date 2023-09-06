@@ -1,0 +1,79 @@
+steps:
+  NATION-5bbce95e-cbd4-4a89-b4be-7a791fef9b0f:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Nation data as defined by TPC-H
+      locationID: ""
+      locationName: SAMPLE_SNOWFLAKE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fd82f14f-b66a-4f6b-891d-22844c6dd331
+              stepCounter: 5bbce95e-cbd4-4a89-b4be-7a791fef9b0f
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: N_NATIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3088ee64-9caa-4963-9aab-46e27c47ae50
+              stepCounter: 5bbce95e-cbd4-4a89-b4be-7a791fef9b0f
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: ""
+            name: N_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fc9d88a3-7a9a-4059-b230-ef26852c9f72
+              stepCounter: 5bbce95e-cbd4-4a89-b4be-7a791fef9b0f
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: N_REGIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 56bc179e-799f-4fd6-9954-6d0896313baa
+              stepCounter: 5bbce95e-cbd4-4a89-b4be-7a791fef9b0f
+            config: {}
+            dataType: VARCHAR(152)
+            defaultValue: ""
+            description: ""
+            name: N_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SAMPLE_SNOWFLAKE', 'NATION') }}
+      name: NATION
+      schema: ""
+      sqlType: Source
+      table: NATION
+      type: sourceInput
+    stepCounter: 5bbce95e-cbd4-4a89-b4be-7a791fef9b0f

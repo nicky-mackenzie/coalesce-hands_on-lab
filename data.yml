@@ -1,5 +1,12 @@
 defaultStorageMapping: WORK
-jobs: {}
+jobs:
+  Job-1:
+    excludeSelector: ""
+    id: 1
+    includeSelector: "+{ location: WORK name: FCT_LINEITEM_ORDERS_DIM_LOOKUP }"
+    name: Job1
+    steps: []
+    subgraphs: []
 locations:
   SAMPLE:
     mappingDefinitions:
@@ -733,7 +740,7 @@ stepTypes:
     id: Stage
     isDisabled: false
     metadata:
-      defaultStorageLocation: null
+      defaultStorageLocation: WORK
       error: null
       nodeMetadataSpec: |
         capitalized: Stage
